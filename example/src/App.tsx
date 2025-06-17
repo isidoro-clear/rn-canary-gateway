@@ -1,11 +1,6 @@
 import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'rn-canary-gateway';
-import { NativeModules } from 'react-native';
+import RnCanaryGateway from 'rn-canary-gateway';
 import { useEffect } from 'react';
-
-const { RnCanaryGateway } = NativeModules;
-
-const result = multiply(3, 7);
 
 export default function App() {
   useEffect(() => {
@@ -14,7 +9,7 @@ export default function App() {
   }, []);
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Example App</Text>
     </View>
   );
 }
