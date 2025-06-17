@@ -10,15 +10,15 @@ npm install rn-canary-gateway
 
 ## Usage
 
-
 ```js
-import { multiply } from 'rn-canary-gateway';
+import RnCanaryGateway from 'rn-canary-gateway';
 
-// ...
+// Initialize the gateway with your API key
+RnCanaryGateway.initialize('your-api-key');
 
-const result = multiply(3, 7);
+// Send events to the Canary API
+RnCanaryGateway.sendEvent('test', { message: 'Hello from React Native' });
 ```
-
 
 ## Contributing
 
