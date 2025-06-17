@@ -9,6 +9,18 @@ RCT_EXPORT_MODULE()
     return result;
 }
 
+RCT_EXPORT_METHOD(initialize:(NSString *)apiKey)
+{
+    NSLog(@"Initializing CanaryGateway with API key: %@", apiKey);
+    // Initialize connection with Canary services
+}
+
+RCT_EXPORT_METHOD(sendEvent:(NSString *)eventName data:(NSDictionary *)data)
+{
+    NSLog(@"Sending event: %@ with data: %@", eventName, data);
+    // Send event to Canary backend
+}
+
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
     (const facebook::react::ObjCTurboModule::InitParams &)params
 {
