@@ -1,14 +1,14 @@
 import RnCanaryGateway from './NativeRnCanaryGateway';
 
-function multiply(a: number, b: number): number {
+export function multiply(a: number, b: number): number {
   return RnCanaryGateway.multiply(a, b);
 }
 
-function initialize(apiKey: string) {
+export function initialize(apiKey: string) {
   return RnCanaryGateway.initialize(apiKey);
 }
 
-function sendEvent(eventName: string, data: any) {
+export function sendEvent(eventName: string, data: any) {
   return RnCanaryGateway.sendEvent(eventName, data);
 }
 
